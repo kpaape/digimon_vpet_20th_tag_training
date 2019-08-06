@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digimon</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="tag_training.css">
+    <script src="tag_training.js"></script>
+</head>
+<body>
+    <main>
+        <h3>Digimon Vpet 20th: Tag Training</h3>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#info">Info <span class="caret"> </span></a>
+                </h4>
+                </div>
+                <div id="info" class="panel-collapse collapse in" aria-expanded="true">
+                    <div class="panel-body">
+                        <ol>
+                            <li>Select your first move by clicking A or B under "Player:" (the selected move does not matter as long as it is the move you made). <span class="txt-alert">From here on, the "Player:" buttons will display what move you should make next!</span></li>
+                            <li>Under "Enemy:", click on the move the enemy made. You will notice the list of the enemy's possible moves start to be eliminated.</li>
+                            <li>A move under "Player:" will now be highlighted, play that move.</li>
+                            <li>Repeat steps 2 & 3 until you win the match. <span class="txt-alert">If you selected an incorrect enemy move, click "Reset" and start over.</span></li>
+                            <li>After winning the match, click "Next" and the next set of enemy moves will be highlighted.</li>
+                            <li>Play the opposite attacks as the ones displayed under "Enemy's possible moves".</li>
+                            <li>Repeat steps 5 & 6.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="enemy_moves">
+            <label>Enemy:</label><label id="player_label">Player:</label>
+            <div id="controls">
+                <div id="enemy_controls" class="controls">
+                    <button type="button" id="enemy_a" class="A enemy_controls" disabled>A</button><!--
+                    --><button type="button" id="enemy_b" class="B enemy_controls" disabled>B</button>
+                </div>
+                <div id="player_controls" class="controls">
+                    <button type="button" id="player_A" class="A player_controls">A</button><!--
+                    --><button type="button" id="player_B" class="B player_controls">B</button>
+                </div>
+            </div>
+            <button type="button" id="reset">Reset</button>
+        </div><!--
+        --><div id="possible_moves">
+            <label>Enemy's possible moves: </label>
+            <div id="move_chart"></div>
+            <button id="next_set" disabled>Next</button>
+        </div>
+    </main>
+</body>
+</html>

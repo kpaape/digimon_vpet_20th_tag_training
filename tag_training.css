@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+main {
+    width: 70%;
+    margin: 100px auto;
+}
+
+p {
+    min-height: 40px;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+select {
+    width: 100%;
+}
+
+#first_attack {
+    margin-bottom: 20px;
+}
+
+#enemy_moves, #possible_moves {
+    width: calc(50% - 60px);
+    display: inline-block;
+    margin: 0 30px;
+    vertical-align: top;
+    position: relative;
+}
+
+#possible_moves label {
+    width: 100%;
+}
+
+#reset, #next_set {
+    margin-top: 20px;
+}
+
+#reset, #next_set, .A, .B {
+    display: inline-block;
+    padding: 5px 0;
+    text-align: center;
+    width: 20%;
+    color: white;
+    background-color: #cc2200;
+    border: none;
+}
+
+.controls {
+    width: 20%;
+    display: inline-block;
+}
+
+.controls .A, .controls .B {
+    width: 100%;
+}
+
+#player_controls, #player_label {
+    position: absolute;
+    right: 0;
+}
+
+#next_set, .B {
+    background-color: #2244cc;
+}
+
+.lowlight .A, .lowlight .B, button:disabled, button#next_set:disabled {
+    background-color: black;
+    color: gray;
+}
+
+.prevent_click {
+    pointer-events: none;
+}
+
+#move_chart {
+    position: relative;
+    overflow: hidden;
+}
+
+#highlight_move {
+    height: 100%;
+    width: 20%;
+
+    box-shadow: 0 0 30px 5px white;
+    -moz-box-shadow: 0 0 30px 5px white;
+    -webkit-box-shadow: 0 0 30px 5px white;
+    position: absolute;
+    top: 0;
+}
+
+.panel-group {
+    margin-top: 20px;
+}
+
+.txt-alert {
+    color: #c00;
+}
+
+@media only screen and (max-width: 750px) {
+    main {
+        margin-top: 20px;
+        width: 90%;
+    }
+    #enemy_moves, #possible_moves {
+        display: block;
+        width: 100%;
+        margin: 40px 0;
+    }
+}
